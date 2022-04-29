@@ -9,11 +9,15 @@ public interface IAddressBookService {
 
     List<ContactPerson> getContactPersonList();
 
-    ContactPerson getContactByID(int id);
+    ContactPerson getContactByID(long id);
 
     ContactPerson createContactPerson(AddressBookDTO addressBookDTO);
 
-    ContactPerson updateContactPerson(AddressBookDTO addressBookDTO);
+    ContactPerson updateContactPerson(int id, AddressBookDTO addressBookDTO);
 
-    void deleteContactByID(int id);
+    void deleteContactByID(long id);
+
+    boolean getData(String name, String pass);
+
+    boolean encodePassword(String password);
 }

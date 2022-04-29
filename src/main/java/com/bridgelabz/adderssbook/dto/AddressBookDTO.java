@@ -3,12 +3,13 @@ package com.bridgelabz.addressbook.dto;
 import com.bridgelabz.addressbook.entity.ContactPerson;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 
-
+@Data
 @AllArgsConstructor
 public class AddressBookDTO {
 
@@ -43,7 +44,7 @@ public class AddressBookDTO {
     //    Validate email id
     @NotEmpty
     @Pattern(regexp = "^[a-z0-9]{3,}([-._+][a-zA-Z0-9]+)?@[a-z]{2,}.[a-z]{2,3}(.[a-z]{2})?$"
-            ,message = "Email should be a valid")
+            ,message = "Email shuld be a valid (e.g. xxx@yyy.zzz)")
     public String emailId;
 
     @NotEmpty
