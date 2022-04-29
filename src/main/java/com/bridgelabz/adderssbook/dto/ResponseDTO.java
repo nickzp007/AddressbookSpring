@@ -2,6 +2,9 @@ package com.bridgelabz.adderssbook.dto;
 
 import lombok.*;
 
+/**
+ * Class for send response in for of string message and data object
+ */
 @Data
 @Getter
 @Setter
@@ -13,5 +16,9 @@ public class ResponseDTO {
     public ResponseDTO(String message, Object data) {
         this.message = message;
         this.data = data;
+    }
+
+    public ResponseDTO(String message) {
+        this.message=message;
     }
 }
